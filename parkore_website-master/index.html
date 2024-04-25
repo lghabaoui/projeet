@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            .home {
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="home">
+            <header>
+                <a href="#" class="logo"><img src="img/Untitled-1.png"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Renting Playgrounds</a></li>
+                    <li><a href="get_team.html">Get Team</a></li>
+                    <li><a href="#">Get Refree</a></li>
+                    <li><a href="#">Get The Discount</a></li>
+                    <li><a href="#">Other Service</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Book with the click of a<br><span>button</span></h2>
+                    <p>
+                        "Discover the ease of booking with a simple click. Experience convenience at your fingertips as you unlock a world of possibilities. Streamline your journey and explore endless options with just a single tap. Embrace the power of instant booking and embark on your next adventure hassle-free."
+                    </p>
+                    <a href="#">Renting Playgrounds</a>
+                </div>
+                <div class="imgBox">
+                    <img src="img/3.png" alt="" class="sports">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="img/1.png" onclick="imgSlider('img/1.png'); changeWallpaper('https://cdn2.unrealengine.com/ea-sports-fc-24-primary-1920x1080-f4517778e6e3.jpg');"></li>
+                <li><img src="img/5.png" onclick="imgSlider('img/5.png'); changeWallpaper('https://png.pngtree.com/background/20210714/original/pngtree-vs-pop-art-background-with-light-effect-picture-image_1208990.jpg');"></li>
+                <li><img src="img/4.png" onclick="imgSlider('img/4.png'); changeWallpaper('https://w0.peakpx.com/wallpaper/485/604/HD-wallpaper-football-cards-lawn-referee-sports.jpg');"></li>
+                <li><img src="img/3.png" onclick="imgSlider('img/3.png'); changeWallpaper('https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?cs=srgb&dl=pexels-grizzlybear-399187.jpg&fm=jpg');"></li>
+            </ul>
+        </section>
+
+        <script>
+            function imgSlider(someThing){
+                document.querySelector('.sports').src = someThing;
+            }
+            function changeWallpaper(imageUrl){
+                const sec = document.querySelector('.home');
+                sec.style.backgroundImage = "url('" + imageUrl + "')";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0"> 
+    <title>Feedback Form with map</title> 
+    <link rel="stylesheet" 
+          href="css/index.css"> 
+    <link rel="stylesheet" 
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+          integrity= 
+"sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" /> 
+</head> 
+  
+<body> 
+    <div class="ffbox"> 
+        <div class="ffbox1"> 
+            
+                <input type="tel"
+                       id="mobile" 
+                       name="mobile" required> 
+  
+                <label for="msg"> 
+                    <i class=" fa fa-solid fa-comment" 
+                       style="margin: 2px;"> 
+                    </i> 
+                    Select place
+                </label> 
+                
+    <select id="language-picker">
+        <option value="0">ملعب القرب كاستيا</option>
+        <option value="1">ملاعب القرب كرة القدم حومه شوك(حي بن كيران)</option>
+        <option value="2"> ملعب القرب الهرارش</option>
+        <option value="3">ملعب كرة القدم گورزيانة</option>
+        <option value="4">ملعب القرب مسنانة</option>
+        </select> 
+  
+                <button type="submit"> 
+                    Submit 
+                </button> 
+            </form> 
+        </div> 
+        <div class="map-div"> 
+            <iframe src= 
+"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.911035115615!2d-5.8300844!3d35.7659736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b80ada4b7463b%3A0x69592537a8ebaca5!2z2YXZhNin2LnYqCDYp9mE2YLYsdio4oCt!5e0!3m2!1sar!2s!4v1643723411151!5m2!1sar!2s"
+                    width="370" 
+                    height="95%" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"> 
+            </iframe> 
+        </div> 
+    </div> 
+    <script>
+        function changeIframeSrc(value) {
+            var iframeSrc = "";
+            switch (value) {
+                case "0":
+                    iframeSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.911035115615!2d-5.8300844!3d35.7659736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b80ada4b7463b%3A0x69592537a8ebaca5!2z2YXZhNin2LnYqCDYp9mE2YLYsdio4oCt!5e0!3m2!1sar!2s!4v1643723411151!5m2!1sar!2s";
+                    break;
+                case "1":
+                    iframeSrc = "https://www.google.com/maps/place/%D9%85%D9%84%D8%A7%D8%B9%D8%A8+%D8%A7%D9%84%D9%82%D8%B1%D8%A8+%D9%83%D8%B1%D9%87+%D8%A7%D9%84%D9%82%D8%AF%D9%85+%D8%AD%D9%88%D9%85%D9%87+%D8%B4%D9%88%D9%83(%D8%AD%D9%8A+%D8%A8%D9%86+%D9%83%D9%8A%D8%B1%D8%A7%D9%86)%E2%80%AD/@35.756194,-5.7934534,861m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd0b81a706ecd94f:0x6b33fd2fe9898a8c!8m2!3d35.7561897!4d-5.7908785!16s%2Fg%2F11p471p01x!5m1!1e4?entry=ttu";
+                    break;
+                case "2":
+                    iframeSrc = "https://www.google.com/maps/place/%D9%85%D9%84%D8%B9%D8%A8+%D8%A7%D9%84%D9%82%D8%B1%D8%A8+%D9%84%D9%83%D8%B1%D8%A9+%D8%A7%D9%84%D9%82%D8%AF%D9%85%E2%80%AD/@35.7747145,-5.7411391,1721m/data=!3m1!1e3!4m10!1m2!2m1!1z2YXZhNi52Kgg2KfZhNmC2LHYqCDYp9mE2YfYsdin2LHYtA!3m6!1s0xd0b81a461a3eb8d:0x9ae97f9f8ac74dad!8m2!3d35.7747287!4d-5.7393369!15sCiLZhdmE2LnYqCDYp9mE2YLYsdioINin2YTZh9ix2KfYsdi0kgEKcGxheWdyb3VuZOABAA!16s%2Fg%2F11ngjr_m7v!5m1!1e4?entry=ttu";
+                    break;
+                case "3":
+                    iframeSrc = "https://www.google.com/maps/place/%D9%85%D9%84%D8%B9%D8%A8+%D9%83%D8%B1%D8%A9+%D8%A7%D9%84%D9%82%D8%AF%D9%85+%DA%AF%D9%88%D8%B1%D8%B2%D9%8A%D8%A7%D9%86%E2%80%AD/@35.7442694,-5.819199,861m/data=!3m1!1e3!4m6!3m5!1s0xd0b8732f9f0f1f5:0x20ca3e35bd7d40fd!8m2!3d35.7442651!4d-5.8166241!16s%2Fg%2F11c2k3m6gj!5m1!1e4?entry=ttu";
+                    break;
+                case "4":
+                    iframeSrc = "https://www.google.com/maps/place/%D9%85%D9%84%D8%B9%D8%A8+%D9%83%D8%B1%D8%A9+%D8%A7%D9%84%D9%82%D8%AF%D9%85+%DA%AF%D9%88%D8%B1%D8%B2%D9%8A%D8%A7%D9%86%E2%80%AD/@35.7442694,-5.819199,861m/data=!3m1!1e3!4m6!3m5!1s0xd0b8732f9f0f1f5:0x20ca3e35bd7d40fd!8m2!3d35.7442651!4d-5.8166241!16s%2Fg%2F11c2k3m6gj!5m1!1e4?entry=ttu";
+                    break;
+            }
+            document.getElementById("map-iframe").src = iframeSrc;
+        }
+    </script>
+</body> 
+  
+</html>
